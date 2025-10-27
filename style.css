@@ -1,0 +1,26 @@
+/* Basic dark/orange theme inspired by www.shri.digital */
+:root{--bg:#0b1020;--card:#071026;--muted:#9aa4b2;--accent:#ff8a00;--accent-2:#ffb86b}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#041226);color:#eaf6ff;min-height:100vh}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(255,255,255,0.02)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#06202c}
+.title{font-weight:700}
+.container{display:grid;grid-template-columns:360px 1fr;gap:14px;padding:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px}
+.panel{min-height:60vh}
+input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:rgba(255,255,255,0.02);color:inherit;margin-bottom:8px}
+textarea{min-height:80px}
+.btn{background:var(--accent);color:#051923;padding:8px 10px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04)}
+.muted{color:var(--muted);font-size:13px}
+.row{display:flex;gap:8px}
+.top-actions{display:flex;gap:12px;align-items:center}
+.badge{background:#ff4d4f;color:white;padding:3px 8px;border-radius:999px;font-size:12px}
+.records{display:flex;flex-direction:column;gap:8px}
+.record{padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));display:flex;justify-content:space-between;align-items:center}
+.record .meta{display:flex;flex-direction:column}
+.footer{padding:12px 18px;color:var(--muted)}
+.modal{position:fixed;inset:0;background:rgba(4,8,18,0.6);display:flex;align-items:center;justify-content:center}
+.modal-card{width:100%;max-width:760px;background:var(--card);padding:14px;border-radius:12px}
+@media(max-width:880px){.container{grid-template-columns:1fr;padding:12px}}
