@@ -1,0 +1,65 @@
+<!doctype html>
+<h3>Add Record</h3>
+<form id="formRecord">
+<input id="businessName" placeholder="Business Name *" required />
+<input id="category" placeholder="Category *" required />
+<input id="ownerName" placeholder="Owner Name *" required />
+<input id="contact" placeholder="Contact *" required />
+<input id="address" placeholder="Address *" required />
+<input id="followUp" type="datetime-local" placeholder="Follow-up *" required />
+<input id="link1" placeholder="Link 1 (optional)" />
+<input id="link2" placeholder="Link 2 (optional)" />
+<input id="link3" placeholder="Link 3 (optional)" />
+<textarea id="remarks" placeholder="Remarks"></textarea>
+<div class="row">
+<button class="btn" type="submit">Save</button>
+<button type="button" id="clearForm" class="btn ghost">Clear</button>
+</div>
+</form>
+</section>
+
+
+<section class="card" style="margin-top:12px">
+<h4>Backup / Import</h4>
+<div class="row">
+<button id="btnExport" class="btn">Export JSON</button>
+<input id="importFile" type="file" accept="application/json" />
+</div>
+</section>
+</aside>
+
+
+<section class="panel card" id="rightPanel">
+<div class="panel-head">
+<h3 id="listTitle">Your Entries</h3>
+<div class="filters">
+<input id="search" placeholder="Search business / owner" />
+<select id="filterStatus"><option value="all">All</option><option value="pending">Pending</option><option value="done">Done</option></select>
+</div>
+</div>
+
+
+<div id="recordsList" class="records"></div>
+</section>
+</main>
+
+
+<footer class="footer">Shri CRM • Hosted on Render • Data: Firebase Firestore</footer>
+
+
+<!-- Due modal -->
+<div id="dueModal" class="modal" style="display:none">
+<div class="modal-card">
+<div class="modal-head"><h4>Due Follow-ups</h4><button id="closeDue">Close</button></div>
+<div id="dueItems"></div>
+</div>
+</div>
+
+
+</div>
+
+
+<script src="/firebase.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
